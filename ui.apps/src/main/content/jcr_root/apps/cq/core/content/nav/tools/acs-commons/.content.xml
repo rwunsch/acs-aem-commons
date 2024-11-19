@@ -50,4 +50,6 @@
     <dynamic-deck-dynamo/>
     <qr-code/>
 
+    <user-request-tracker/>
+
 </jcr:root>

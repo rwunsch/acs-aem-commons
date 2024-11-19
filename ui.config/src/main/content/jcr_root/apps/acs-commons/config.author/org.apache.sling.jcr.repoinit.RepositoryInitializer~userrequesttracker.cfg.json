@@ -1,0 +1,16 @@
+{
+    "scripts": [
+      "create service user user-request-persistence-service",
+      "ensure nodes (sling:Folder) /var/analytics",
+      "ensure nodes (sling:Folder) /var/analytics/user-tracking",
+      "ensure nodes (sling:Folder) /var/analytics/user-tracking/instances",
+      "ensure nodes (sling:Folder) /var/analytics/user-tracking/cluster",
+      "ensure nodes (sling:Folder) /apps/cq/core/content/nav/tools",
+      "set ACL for user-request-persistence-service\n   allow jcr:read on /\n    end",
+      "set ACL for user-request-persistence-service\n   allow jcr:read on /apps/acs-commons/components/utilities/user-request-tracker\n end",
+      "set ACL for user-request-persistence-service\n   allow jcr:read,jcr:write on /var\n    end",
+      "set ACL for user-request-persistence-service\n   allow jcr:read,jcr:write,jcr:nodeTypeManagement,jcr:addChildNodes,jcr:modifyProperties,rep:write on /var/analytics/user-tracking\n    end",
+      "set ACL for user-request-persistence-service\n   allow jcr:read on /home/users\n    end",
+      "set ACL for user-request-persistence-service\n   allow jcr:read,jcr:write,jcr:nodeTypeManagement,jcr:addChildNodes,jcr:modifyProperties,rep:write on /apps/cq/core/content/nav/tools\n    end"
+    ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="/libs/granite/core/content/login/favicon.ico">
+	<sly data-sly-call="${clientLib.all @ categories=['coralui3','granite.ui.coral.foundation','granite.ui.shell','cq.authoring.dialog', 'userrequesttracker.user-request-tracker']}"
+     data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+         
+</head>
+<body class="coral--light foundation-layout-util-maximized-alt">
+
+
+<coral-shell-header aria-hidden="false" aria-label="Header Bar"
+                    class="coral--dark granite-shell-header coral3-Shell-header"
+                    role="region">
+    <coral-shell-header-home aria-level="2" class="globalnav-toggle" data-globalnav-toggle-href="/" role="heading">
+        <a class="coral3-Shell-homeAnchor" href="/"
+           icon="adobeExperienceManagerColor" is="coral-shell-homeanchor"
+           style="display: inline-block; padding-right: 0;">
+            <coral-icon
+                    aria-label="adobe experience manager color"
+                    class="coral3-Icon coral3-Shell-homeAnchor-icon coral3-Icon--adobeExperienceManagerColor coral3-Icon--sizeM"
+                    icon="adobeExperienceManagerColor" role="img"
+                    size="M"></coral-icon>
+            <coral-shell-homeanchor-label>Adobe Experience Manager
+            </coral-shell-homeanchor-label>
+        </a>
+        <span style="line-height: 2.375rem;">/ ACS AEM Commons / ${properties.jcr:title} </span>
+    </coral-shell-header-home>
+</coral-shell-header>
+
+
+<div class="foundation-layout-panel">
+    <div class="foundation-layout-panel-header">
+        <betty-titlebar>
+            <betty-titlebar-title>
+                <span aria-level="1" class="granite-title" role="heading">${properties.jcr:title}</span>
+            </betty-titlebar-title>
+            <betty-titlebar-primary></betty-titlebar-primary>
+            <betty-titlebar-secondary>
+                <!--
+                <i class="coral-Icon coral-Icon--infoCircle docs-ThemeSwitcher-icon" data-init="quicktip"
+                   data-quicktip-arrow="right" data-quicktip-type="info"
+                   data-quicktip-content="Make sure ACS commons UI.Content package is installed to get query list page">
+                </i>
+                <a href="/mnt/overlay/acs-commons/components/utilities/genericlist.html?item=/etc/acs-commons/lists/dynamic-deck-query-list"
+                   is="coral-anchorbutton" variant="info" icon="rail" iconsize="S">
+                    Query List
+                </a>
+                -->
+            </betty-titlebar-secondary>
+        </betty-titlebar>
+    </div>
+    
+    <div class="content-container-inner" style="width:60%; margin:0 auto;">
+        <div class="sidebar-container">
+            <!-- Sidebar for Instance Selection -->
+            <div id="sidebar" class="coral3-Panel coral3-Panel--quiet sidebar">
+                <h3 class="coral-Heading coral-Heading--2">Instances</h3>
+                <ul id="sidebar-instance-list" class="coral3-List coral3-List--block"></ul>
+				<button id="reload-data" class="coral-Button coral-Button--primary" style="margin-bottom: 10px;">  Reload Data</button>
+                <button id="download-instance-csv" class="coral-Button coral-Button--primary coral3-Button--block">Download Instance as CSV</button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div id="main-content" class="coral3-Panel coral3-Panel--quiet main-content">
+                <h2 id="instance-title" class="coral-Heading coral-Heading--2"></h2> <!-- Headline placeholder -->
+                <coral-tablist id="interval-tab-list" class="coral3-Tabs"></coral-tablist>
+                <div id="interval-tab-panels" class="coral3-TabPanel"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+

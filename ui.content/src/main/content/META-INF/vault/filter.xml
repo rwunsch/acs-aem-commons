@@ -80,4 +80,7 @@
         <include pattern="/var/acs-commons/on-deploy-scripts-status"/>
         <include pattern="/var/acs-commons/on-deploy-scripts-status/README.txt(/.*)?"/>
     </filter>
+    <filter root="/content/tools">
+        <include pattern="/content/tools/userrequesttracker(/.*)?"/>
+    </filter>
 </workspaceFilter>

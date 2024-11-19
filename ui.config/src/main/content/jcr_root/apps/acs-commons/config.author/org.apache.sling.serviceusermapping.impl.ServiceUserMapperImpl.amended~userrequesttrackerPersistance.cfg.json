@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "com.adobe.acs.acs-aem-commons-bundle:user-request-persistence-service=[user-request-persistence-service]"
+  ]
+}

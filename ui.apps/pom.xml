@@ -159,6 +159,7 @@
                         </exclude>
                         <exclude>/src/main/content/jcr_root/apps/acs-commons/clientlibs/vendor</exclude>
                         <exclude>/src/main/content/jcr_root/apps/acs-commons/authoring/vendor</exclude>
+                        <exclude>/src/main/content/jcr_root/apps/acs-commons/components/utilities/user-request-tracker/clientlibs</exclude>
                     </excludes>
                 </configuration>
             </plugin>
